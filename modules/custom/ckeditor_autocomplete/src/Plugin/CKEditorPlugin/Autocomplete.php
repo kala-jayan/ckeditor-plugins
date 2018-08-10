@@ -14,15 +14,15 @@ use Drupal\editor\Entity\Editor;
  *   module = "ckeditor_autocomplete"
  * )
  */
-class Autocomplete extends CKEditorPluginBase implements CKEditorPluginConfigurableInterface, CKEditorPluginContextualInterface {
-
-  public Autocomplete() {
+class Autocomplete extends CKEditorPluginBase implements CKEditorPluginConfigurableInterface, CKEditorPluginContextualInterface { 
+   protected function __construct() {
     var itemsArray = [ { id: 1, name: '@powercms' }, { id: 2, name: '@technology' } ];
     new CKEDITOR.plugins.autocomplete( editor, {
        textTestCallback: textTestCallback,
       dataCallback: dataCallback
-    } );
-  }
+    } );    
+   }
+ 
   /**
    * {@inheritdoc}
    */
