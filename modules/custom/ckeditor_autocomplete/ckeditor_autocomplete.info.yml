@@ -1,0 +1,11 @@
+name: CKEditor Autocomplete
+type: module
+description: This plugin module adds the autocomplete feature to CKEditor in Drupal 8
+package: CKEditor
+dependencies:
+  -ckeditor
+  -textwatcher
+  -textmatch
+version: '8.x-1.0'
+core: '8.x'
+project: 'ckeditor_autocomplete'

@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains ckeditor_googlesearch.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ckeditor_autocomplete_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.ckeditor_autocomplete':
+      $output = '';
+      $output .= '<h3>' . t('Ckeditor autocomplete') . '</h3>';   
+      $output .= '<dl>';
+      $output .= '<dt>' . t('Settings') . '</dt>';
+      $output .= '<dd>' . t('This plugin provides contextual completion feature for custom text matches based on user input. Every time the user types a pre-configured matching character, such as "@" or "#", they get information about available autocomplete options') . '</dd>';
+      $output .= '</dl>';
+      return $output;
+
+    default:
+  }
+}

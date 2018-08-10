@@ -1,0 +1,17 @@
+AutoCorrect
+Imageresponsive
+
+
+The custom Autotag plugin created in the tutorial provides the users with the autocompletion functionality for GitHub issues. Every time the user types the <strong>#</strong> character, available autocomplete suggestions are displayed in the dropdown and can be inserted into the content with <kbd>Enter</kbd> or <kbd>Tab</kbd> keys.
+
+Custom Drupal 8 CKEditor Autocomplete module
+
+To create a custom Drupal 8 CKEditor Autocomplete module which will  the functionality of autocompletion in the ckeditor using the Autocomplete plugin. Every time the user types a pre-configured matching character, such as "@" or "#", they get information about available autocomplete suggestions as  dropdown and can be inserted into the content with Enter or Tab keys.
+
+Steps for developing the module
+
+- Create a basic structure of files and folders which are needed to develop Drupal 8 CKEditor custom module.
+- Define the ckeditor_autocomplete.info.yml
+
+- create the plugin file as Autocomplete.php. Here we can extend the classes from CKEditorPluginBase. It needs to be downloaded plugin from official CKEditor website and saved in  /libraries folder of Drupal8 site. Add documentation about the plugin in autocomplete.php
+- Override the functions for implementing the autocomplete functionality.
