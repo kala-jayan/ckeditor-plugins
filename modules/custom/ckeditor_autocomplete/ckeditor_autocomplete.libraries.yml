@@ -1,0 +1,14 @@
+ckeditor_autocomplete.autocomplete:
+  version: VERSION
+  js:
+    js/autocomplete.js: {}
+		js/textmatch/plugin.js: {}
+		js/autocomplete/plugin.js: {}
+  
+  css:
+    component:
+      css/autocomplete.css: {}
+  dependencies:    
+    - core/drupal.ajax
+    - core/jquery.ui.autocomplete
+    - core/underscore

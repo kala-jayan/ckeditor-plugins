@@ -3,6 +3,8 @@
 namespace Drupal\ckeditor_autocomplete\Plugin\CKEditorPlugin;
 
 use Drupal\ckeditor\CKEditorPluginBase;
+use Drupal\ckeditor\CKEditorPluginConfigurableInterface;
+use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\editor\Entity\Editor;
 
 /**
@@ -14,13 +16,9 @@ use Drupal\editor\Entity\Editor;
  *   module = "ckeditor_autocomplete"
  * )
  */
-class Autocomplete extends CKEditorPluginBase implements CKEditorPluginConfigurableInterface, CKEditorPluginContextualInterface { 
-   protected function __construct() {
-    var itemsArray = [ { id: 1, name: '@powercms' }, { id: 2, name: '@technology' } ];
-    new CKEDITOR.plugins.autocomplete( editor, {
-       textTestCallback: textTestCallback,
-      dataCallback: dataCallback
-    } );    
+class Autocomplete extends CKEditorPluginBase implements CKEditorPluginConfigurableInterface { 
+   public function __construct() {
+    
    }
  
   /**
@@ -45,7 +43,7 @@ class Autocomplete extends CKEditorPluginBase implements CKEditorPluginConfigura
    * {@inheritdoc}
    */
   public function getLibraries(Editor $editor) {
-    return [];
+    return ['js/autocomplete.js'];
   }
 
   /**
@@ -76,5 +74,7 @@ class Autocomplete extends CKEditorPluginBase implements CKEditorPluginConfigura
   public function getConfig(Editor $editor) {
     return [];
   }
-
+  public function getPluginId() {
+    return $this->pluginId;
+  }
 }
